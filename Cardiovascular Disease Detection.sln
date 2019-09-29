@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardiovascular Disease Detection", "Cardiovascular Disease Detection\Cardiovascular Disease Detection.csproj", "{63748660-E40B-483B-A3ED-77C7F649F729}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cardiovascular Disease DetectionML.Model", "Cardiovascular Disease DetectionML.Model\Cardiovascular Disease DetectionML.Model.csproj", "{F5A7243D-A6B6-4A94-8354-34C3ABC6C4AD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Cardiovascular Disease DetectionML.ConsoleApp", "Cardiovascular Disease DetectionML.ConsoleApp\Cardiovascular Disease DetectionML.ConsoleApp.csproj", "{73736436-0687-4B24-A3BD-2E9CDB50F946}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63748660-E40B-483B-A3ED-77C7F649F729}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63748660-E40B-483B-A3ED-77C7F649F729}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63748660-E40B-483B-A3ED-77C7F649F729}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63748660-E40B-483B-A3ED-77C7F649F729}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5A7243D-A6B6-4A94-8354-34C3ABC6C4AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5A7243D-A6B6-4A94-8354-34C3ABC6C4AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5A7243D-A6B6-4A94-8354-34C3ABC6C4AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5A7243D-A6B6-4A94-8354-34C3ABC6C4AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{73736436-0687-4B24-A3BD-2E9CDB50F946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73736436-0687-4B24-A3BD-2E9CDB50F946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73736436-0687-4B24-A3BD-2E9CDB50F946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73736436-0687-4B24-A3BD-2E9CDB50F946}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2D7B4401-25FF-4718-A7B6-F2067D297E61}
+	EndGlobalSection
+EndGlobal

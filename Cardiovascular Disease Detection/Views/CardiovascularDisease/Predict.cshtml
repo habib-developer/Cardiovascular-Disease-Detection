@@ -1,0 +1,113 @@
+﻿@model Cardiovascular_Disease_DetectionML.Model.ModelInput
+
+@{
+    ViewData["Title"] = "Cardiovascular Diseasese Prediction";
+}
+
+<h2>Cardiovascular Disease Detection in ASP.NET Core Using ML.NET</h2>
+<hr />
+@if (ViewBag.Result != null)
+{
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Prediction:@ViewBag.Result.Prediction</h4>
+        </div>
+        <div class="col-md-6">
+            <h4>Score:@ViewBag.Result.Score</h4>
+        </div>
+    </div>
+    <hr />
+}
+
+<div class="row">
+    <div class="col-md-12">
+        <form asp-action="Predict">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="row">
+                <div class="form-group col-md-4">
+                    <label asp-for="Age" class="control-label"></label>
+                    <input asp-for="Age" class="form-control" />
+                    <span asp-validation-for="Age" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Gender" class="control-label"></label>
+                    <select asp-for="Gender" class="form-control">
+                        <option value="1">Woman</option>
+                        <option value="2">Man</option>
+                    </select>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Height" class="control-label"></label>
+                    <input asp-for="Height" class="form-control" />
+                    <span asp-validation-for="Height" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Weight" class="control-label"></label>
+                    <input asp-for="Weight" class="form-control" />
+                    <span asp-validation-for="Weight" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Ap_hi" class="control-label"></label>
+                    <input asp-for="Ap_hi" class="form-control" />
+                    <span asp-validation-for="Ap_hi" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Ap_lo" class="control-label"></label>
+                    <input asp-for="Ap_lo" class="form-control" />
+                    <span asp-validation-for="Ap_lo" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Cholesterol" class="control-label"></label>
+                    <select asp-for="Cholesterol" class="form-control">
+                        <option value="1">Normal</option>
+                        <option value="2">Above Normal</option>
+                        <option value="3">Well Above Normal</option>
+                    </select>
+                    <span asp-validation-for="Cholesterol" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Gluc" class="control-label"></label>
+                    <select asp-for="Gluc" class="form-control">
+                        <option value="1">Normal</option>
+                        <option value="2">Above Normal</option>
+                        <option value="3">Well Above Normal</option>
+                    </select>
+                    <span asp-validation-for="Gluc" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Smoke" class="control-label"></label>
+                    <select asp-for="Smoke" class="form-control">
+                        <option value="1">Smoke</option>
+                        <option value="0">Not Smoke</option>
+                    </select>
+                    <span asp-validation-for="Smoke" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Alco" class="control-label"></label>
+                    <select asp-for="Alco" class="form-control">
+                        <option value="1">Intake</option>
+                        <option value="0">Not Intake</option>
+                    </select>
+                    <span asp-validation-for="Alco" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-4">
+                    <label asp-for="Active" class="control-label"></label>
+                    <select asp-for="Active" class="form-control">
+                        <option value="1">True</option>
+                        <option value="0">False</option>
+                    </select>
+                    <span asp-validation-for="Active" class="text-danger"></span>
+                </div>
+                
+            </div>
+            <div class="form-group text-right">
+                <input type="submit" value="Predict" class="btn btn-primary" />
+            </div>
+            
+        </form>
+    </div>
+</div>
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
