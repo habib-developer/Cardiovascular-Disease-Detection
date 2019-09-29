@@ -57,7 +57,7 @@ namespace Cardiovascular_Disease_Detection
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=CardiovascularDisease}/{action=Detection}/{id?}");
+                    template: "{controller=CardiovascularDisease}/{action=Predict}/{id?}");
             });
         }
     }
